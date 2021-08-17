@@ -1,0 +1,81 @@
+snippet template "Basic template" b
+\documentclass{article}
+
+\title{}
+\date{2020-}
+\author{Termanteus}
+
+%%%%%%%%%%%%%%%%%%%%%% PACKAGE %%%%%%%%%%%%%%%%%%%%%%%%%
+% Section has a dot
+\usepackage{titlesec}
+  \titlelabel{\thetitle.\quad}
+
+% Dot-filling for ToC's Sections
+\usepackage{tocloft}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+
+% Use for table when having overfull hbox
+\usepackage{adjustbox}
+
+% Support KOMA-Script
+\usepackage{scrextend}
+
+%%%%%%%%%%%%%%%%%%%%%% PACKAGE %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+\pagenumbering{gobble}
+\newpage
+\pagenumbering{arabic}
+
+\tableofcontents
+\newpage	
+	$0
+\end{document}
+endsnippet
+
+snippet mpkg "Extra Math Packages" b
+% Used for graph plot
+\usepackage{tikz}
+\usepackage{pgfplots}
+  \pgfplotsset{compat=1.16}
+
+% Math stuff
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+endsnippet
+
+snippet cpkg "Code Packages" b
+% For add source code with syntax highlighting
+\usepackage{listings}
+
+% For pseudocode
+\usepackage[linesnumbered,ruled]{algorithm2e}
+
+\usepackage{filecontents}
+
+\lstset{
+  language= Python,
+  basicstyle=\small\sffamily,
+  numbers=left,
+ 	numberstyle=\tiny,
+  frame=tb,
+  tabsize=4,
+  columns=fixed,
+  showstringspaces=false,
+  showtabs=false,
+  keepspaces,
+  commentstyle=\color{gray},
+  keywordstyle=\color{blue}
+}
+
+endsnippet
+
+snippet beg "begin{} / end{}" bA
+\\begin{$1}
+	$0
+\\end{$1}
+endsnippet

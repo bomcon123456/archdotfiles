@@ -1,0 +1,24 @@
+open_with vim
+open_with vim t
+open_with nvim
+Q
+search .config
+search ranger
+search .cache
+search wal
+rename colors-kitty:q.conf
+open_with hjhh
+q
+shell unzip
+shell unzip pb_model.zip
+shell scp test_dataloader.ipynb london:/home/vatran/workspace/repo/research/speech/noise_suppression/speenai-erp
+search Doc
+search op
+search doc
+search vin
+search opt
+search traf
+search 
+mkdir DL
+open_with 
+
